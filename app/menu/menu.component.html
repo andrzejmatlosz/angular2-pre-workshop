@@ -1,0 +1,11 @@
+<div class='my-menu'>
+    <button class="menu-btn" (click)="changeView('dashboard')" [class.active]="selectedView === 'dashboard'">Dashboard</button>
+    <button class="menu-btn" (click)="changeView('details')" [class.active]="selectedView === 'details'">Details</button>
+    <button class="menu-btn" (click)="changeView('sharedDataExample')" [class.active]="selectedView === 'sharedDataExample'">Shared Data Example</button>
+    <button class="menu-btn" (click)="changeView('viewChildExample')" [class.active]="selectedView === 'viewChildExample'">ViewChild Example</button>
+    <button class="menu-btn shared-data-example-btn" 
+            (click)="addValueToSharedData()" 
+            *ngIf="selectedView === 'sharedDataExample'">
+        Add data to shared service
+    </button>
+</div>
