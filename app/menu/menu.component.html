@@ -2,7 +2,9 @@
     <button class="menu-btn" (click)="changeView('dashboard')" [class.active]="selectedView === 'dashboard'">Dashboard</button>
     <button class="menu-btn" (click)="changeView('details')" [class.active]="selectedView === 'details'">Details</button>
     <button class="menu-btn" (click)="changeView('sharedDataExample')" [class.active]="selectedView === 'sharedDataExample'">Shared Data Example</button>
-    <button class="menu-btn" (click)="changeView('viewChildExample')" [class.active]="selectedView === 'viewChildExample'">ViewChild Example</button>
+    <button class="menu-btn" (click)="changeView('pipeExample')" [class.active]="selectedView === 'pipeExample'">Pipe Example</button>
+    <button class="menu-btn" (click)="changeView('directiveExample')" [class.active]="selectedView === 'directiveExample'">Directive Example</button>
+    <button class="menu-btn" (click)="changeView('httpExample')" [class.active]="selectedView === 'httpExample'">Http Example</button>
     <button class="menu-btn shared-data-example-btn" 
             (click)="addValueToSharedData()" 
             *ngIf="selectedView === 'sharedDataExample'">

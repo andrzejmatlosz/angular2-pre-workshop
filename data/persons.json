@@ -1,0 +1,9 @@
+{
+    "data": [
+        { "firstname": "Zbigniew", "lastname": "Stonoga" },
+        { "firstname": "Jan", "lastname": "Matejko" },
+        { "firstname": "Jarosław", "lastname": "Kaczyński" },
+        { "firstname": "Donald", "lastname": "Tusk" },
+        { "firstname": "Osama", "lastname": "Bin Laden" }
+    ]
+}

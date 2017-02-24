@@ -1,0 +1,24 @@
+<div>
+    Date without format:
+    {{ sampleDate | date }}
+</div>
+<div>
+    Date with default format:
+    {{ sampleDate | date }}
+</div>
+<div>
+    Date with format dd-MM-yyyy:
+    {{ sampleDate | date:"dd-MM-yyyy" }}
+</div>
+<div class="one-example">
+    Date with dynamic format
+    <input [(ngModel)]="dynamicFormat" />
+    <button (click)="useDynamicFormat()">Use format</button>
+    <div>
+        Date with dynamic format (with upperCase): {{ sampleDate | date : usedFormat | uppercase }}
+    </div>
+</div>
+<div class="one-example">
+    <input [(ngModel)]="someText" />
+    {{someText | fancyLetters}}
+</div>
