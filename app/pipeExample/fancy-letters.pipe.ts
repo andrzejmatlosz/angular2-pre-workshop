@@ -1,8 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({ 
-    name: 'fancyLetters',
-    pure: false
+    name: 'fancyLetters'
 })
 export class FancyLettersPipe implements PipeTransform {
     transform(input: string) {

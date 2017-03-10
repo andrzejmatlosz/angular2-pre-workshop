@@ -5,5 +5,9 @@ import { Component } from '@angular/core';
     templateUrl: 'app/details/detailsAuthor/detailsAuthor.component.html'
 })
 export class DetailsAuthorComponent {
-    author: string = 'Andrzej';
+    public author: string = 'Andrzej';
+
+    public smth() {
+        return "abc";
+    }
 }

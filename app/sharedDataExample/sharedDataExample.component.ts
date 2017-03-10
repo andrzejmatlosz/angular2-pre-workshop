@@ -11,7 +11,9 @@ export class SharedDataExampleComponent implements OnDestroy {
     subscription: Subscription;
 
     constructor(private sharedDataService: SharedDataService) {
-        //this.subscription = 
+        this.subscription = sharedDataService.getSharedData().subscribe((newData) => {
+            this.sharedData.push(newData);
+        });
     }
 
     ngOnDestroy() {

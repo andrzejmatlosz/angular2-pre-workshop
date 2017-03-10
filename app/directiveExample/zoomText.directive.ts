@@ -5,10 +5,11 @@ import { Directive, ElementRef, HostListener, Input, Renderer } from '@angular/c
 })
 export class ZoomTextDirective {
     @Input() myZoomText : boolean;
+    @Input() myZoomTextOptional : string;
 
     constructor(private el: ElementRef, private renderer: Renderer) { }
 
-    private previousFontSize = this.el.nativeElement.style.fontSize; 
+    private previousFontSize; 
 
     @HostListener('mouseenter') onMouseEnter() {
         if (this.myZoomText) {

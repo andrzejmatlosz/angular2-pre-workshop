@@ -32,6 +32,6 @@ import { HttpExampleModule } from './httpExample/httpExample.module';
     ],
     declarations: [ AppComponent ],
     bootstrap: [ AppComponent ],
-    providers: [ SharedDataService ]
+    providers: [ SharedDataService, UserService ]
 })
 export class AppModule { }

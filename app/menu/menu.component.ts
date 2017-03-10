@@ -7,16 +7,20 @@ import { SharedDataService } from './../shared/sharedData.service';
     styleUrls: [ 'app/menu/menu.component.css' ]
 })
 export class MenuComponent {
-    selectedView: string;
+    public selectedView: string;
 
-    constructor(/*private sharedDataService: SharedDataService*/) {
+    @Output() selectedChanged: EventEmitter<string> = 
+        new EventEmitter<string>();
+
+    constructor(private sharedDataService: SharedDataService) {
     }
 
-    changeView(selectedView) {
+    changeView(selectedView: string) {
         this.selectedView = selectedView;
+        this.selectedChanged.emit(this.selectedView);
     }
 
     addValueToSharedData() {
-        // this.sharedDataService.addData('Value from menu component');
+        this.sharedDataService.addData('Value from menu component');
     }
 }

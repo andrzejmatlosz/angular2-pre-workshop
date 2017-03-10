@@ -1,10 +1,12 @@
 <my-title></my-title>
-<my-menu></my-menu>
+<my-menu (selectedChanged)="viewChanged($event)"></my-menu>
 <div class="app-content">
-    <!--<my-details ></my-details>
-    <my-dashboard></my-dashboard>
-    <my-shared-data-example></my-shared-data-example>
+    <!--<my-details [userName]="userNameInAppComponent" *ngIf="selectedView === 'details'"></my-details>
+    <my-dashboard *ngIf="selectedView === 'dashboard'"></my-dashboard>-->
+    <!--<my-shared-data-example></my-shared-data-example>
     <my-pipe-example></my-pipe-example>
     <my-directive-example></my-directive-example>
     <my-http-example></my-http-example>-->
+
+    <my-shared-data-example></my-shared-data-example>
 </div>

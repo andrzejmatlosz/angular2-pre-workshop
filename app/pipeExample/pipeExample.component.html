@@ -1,6 +1,6 @@
 <div>
     Date without format:
-    {{ sampleDate | date }}
+    {{ sampleDate }}
 </div>
 <div>
     Date with default format:
@@ -15,7 +15,7 @@
     <input [(ngModel)]="dynamicFormat" />
     <button (click)="useDynamicFormat()">Use format</button>
     <div>
-        Date with dynamic format (with upperCase): {{ sampleDate | date : usedFormat | uppercase }}
+        Date with dynamic format (with upperCase): {{ sampleDate | date : usedFormat }}
     </div>
 </div>
 <div class="one-example">

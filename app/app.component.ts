@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Optional } from '@angular/core';
 import { UserService } from './shared/user.service';
 
 @Component({
@@ -7,6 +7,14 @@ import { UserService } from './shared/user.service';
     styleUrls: [ 'app/app.component.css' ]
 })
 export class AppComponent {
-    constructor( /*private userService: UserService*/ ) {
+    userNameInAppComponent = '';
+    selectedView: string = '';
+
+    constructor(private userService: UserService) {
+        this.userNameInAppComponent = userService.userName;
+    }
+
+    viewChanged(selectedView: string, xyz?: number) {
+        this.selectedView = selectedView;
     }
 }
