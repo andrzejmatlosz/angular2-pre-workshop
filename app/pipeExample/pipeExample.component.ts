@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { TeamMember, TeamColor } from './teamMember.model';
 
 @Component({
     selector: 'my-pipe-example',
