@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { SharedDataService } from './../shared/sharedData.service';
 import { Subscription } from 'rxjs';
 
@@ -6,12 +6,20 @@ import { Subscription } from 'rxjs';
     selector: 'my-shared-data-example',
     templateUrl: 'app/sharedDataExample/sharedDataExample.component.html'
 })
-export class SharedDataExampleComponent implements OnDestroy {
+export class SharedDataExampleComponent implements OnDestroy, OnInit {
     sharedData: Array<string> = [];
     subscription: Subscription;
 
     constructor(private sharedDataService: SharedDataService) {
-        //this.subscription = 
+    }
+
+    ngOnInit() {
+        this.subscription = this.sharedDataService.getSharedData()
+            .subscribe(this.readData.bind(this));
+    }
+
+    readData(newData) {
+        this.sharedData.push(newData);
     }
 
     ngOnDestroy() {

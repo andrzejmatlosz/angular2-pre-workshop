@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'my-details',
+    selector: 'my-dashboard',
     templateUrl: 'app/details/detailsContainer.component.html'
 })
 export class DetailsContainerComponent {

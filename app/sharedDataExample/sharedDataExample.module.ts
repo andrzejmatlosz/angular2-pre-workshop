@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common'
+import { CommonModule } from '@angular/common';
 
 import { SharedDataExampleComponent }   from './sharedDataExample.component';
 import { SharedDataInput1Component }   from './sharedDataInput1/sharedDataInput1.component';

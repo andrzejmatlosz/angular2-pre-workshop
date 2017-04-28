@@ -3,7 +3,8 @@ import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class SharedDataService {
-    private sharedDataSource = new Subject<string>();
+    private sharedDataSource: Subject<string> = 
+        new Subject<string>();
 
     constructor() {
         console.log('create shared data service');

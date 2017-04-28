@@ -9,7 +9,7 @@ import { SharedDataService } from './../shared/sharedData.service';
 export class MenuComponent {
     selectedView: string;
 
-    constructor(/*private sharedDataService: SharedDataService*/) {
+    constructor(private sharedDataService: SharedDataService) {
     }
 
     changeView(selectedView) {
@@ -17,6 +17,6 @@ export class MenuComponent {
     }
 
     addValueToSharedData() {
-        // this.sharedDataService.addData('Value from menu component');
+        this.sharedDataService.addData('Value from menu component');
     }
 }

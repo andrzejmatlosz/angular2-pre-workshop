@@ -8,7 +8,7 @@ export class ZoomTextDirective {
 
     constructor(private el: ElementRef, private renderer: Renderer) { }
 
-    private previousFontSize = this.el.nativeElement.style.fontSize; 
+    private previousFontSize = this.el.nativeElement.style.fontSize;
 
     @HostListener('mouseenter') onMouseEnter() {
         if (this.myZoomText) {

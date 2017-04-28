@@ -6,8 +6,7 @@
     <button class="menu-btn" (click)="changeView('directiveExample')" [class.active]="selectedView === 'directiveExample'">Directive Example</button>
     <button class="menu-btn" (click)="changeView('httpExample')" [class.active]="selectedView === 'httpExample'">Http Example</button>
     <button class="menu-btn shared-data-example-btn" 
-            (click)="addValueToSharedData()" 
-            *ngIf="selectedView === 'sharedDataExample'">
+            (click)="addValueToSharedData()" >
         Add data to shared service
     </button>
 </div>
